@@ -258,14 +258,7 @@ public class CountryConverter
 
     public static string ConvertAlpha2ToJapaneseName(string alpha2Code)
     {
-        if (countryCodeToJapaneseName.TryGetValue(alpha2Code, out string japaneseName))
-        {
-            return japaneseName;
-        }
-        else
-        {
-            return "Unknown Country Code";
-        }
+        return countryCodeToJapaneseName.TryGetValue(alpha2Code, out string japaneseName) ? japaneseName : "Unknown Country Code";
     }
 }
 
